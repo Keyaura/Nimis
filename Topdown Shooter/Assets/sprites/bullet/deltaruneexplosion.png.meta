@@ -1,0 +1,501 @@
+fileFormatVersion: 2
+guid: e6ccd20327d44f242b53f2bb3ab05232
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: deltaruneexplosion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 202.66666
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e284ad0bd24165a40874be4670d30eb5
+      internalID: -1893732684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 202.66666
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a49273045655a4298b2f684efd2e35
+      internalID: -1621226010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 202.66666
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2bb7345726326449e3b16399116997
+      internalID: 1169169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 202.66666
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f90c5935ef7cc4c82af823acab1713
+      internalID: -260673901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 202.66666
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700664ddafd8b0b4f8cb303c29205a67
+      internalID: 560867240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 202.66666
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457514aee0ca6b34e9747a7fb5d32a2f
+      internalID: -365356041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 101.666664
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed8b38ad24c918448f6b353ffd91eb4
+      internalID: -1202428224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 101.666664
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2e8f975fef52c44832c018165126bd
+      internalID: -1649822846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 101.666664
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedad27eb6cfe4b4d95149a3013c8cdb
+      internalID: -1479979103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 101.666664
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8f05445fbae104d8f15ae739487809
+      internalID: 1179445605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 101.666664
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9477efd33dcd142be37ce9111e93b6
+      internalID: -1393204339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_11
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 101.666664
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ccbb5e03333ad4b858fdd68d4f1863
+      internalID: 914951150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.6666641
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5aefa5bd71f61a458dcf8ad11f85acc
+      internalID: 13851618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0.6666641
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5728b56df9d5842b33ecb56a477264
+      internalID: -318551304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_14
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0.6666641
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceedf591bbace434db0ef2f73115eb43
+      internalID: -1434416771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_15
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0.6666641
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9978caef9595c9d4f8578c5150738283
+      internalID: 1858964994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deltaruneexplosion_16
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0.6666641
+        width: 72.166664
+        height: 101.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6ff5fa7dcc72947bdfda4cb4aaf2ed
+      internalID: -666864622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      deltaruneexplosion_0: -1893732684
+      deltaruneexplosion_1: -1621226010
+      deltaruneexplosion_10: -1393204339
+      deltaruneexplosion_11: 914951150
+      deltaruneexplosion_12: 13851618
+      deltaruneexplosion_13: -318551304
+      deltaruneexplosion_14: -1434416771
+      deltaruneexplosion_15: 1858964994
+      deltaruneexplosion_16: -666864622
+      deltaruneexplosion_2: 1169169
+      deltaruneexplosion_3: -260673901
+      deltaruneexplosion_4: 560867240
+      deltaruneexplosion_5: -365356041
+      deltaruneexplosion_6: -1202428224
+      deltaruneexplosion_7: -1649822846
+      deltaruneexplosion_8: -1479979103
+      deltaruneexplosion_9: 1179445605
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

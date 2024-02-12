@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Projectile
+  - Wall
+  - pickup
+  - Playerbullet
+  - enemy
+  - enemydead
+  - biteradius
+  - enemybullet
+  - ninjaradius
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Wall
+  - Water
+  - UI
+  - Bullet
+  - Player
+  - Enemy
+  - Ninjastar
+  - Pickup
+  - Ghost
+  - Swarmer
+  - Enemydead
+  - Enemybullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
