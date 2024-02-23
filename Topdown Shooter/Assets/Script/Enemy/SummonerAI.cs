@@ -15,7 +15,7 @@ public class SummonerAI : MonoBehaviour
     public playershooting _playerShooterScript;
     private GameObject player;
     [SerializeField] GameObject enemy;
-    [SerializeField] private int score = 1000;
+   // [SerializeField] private int score = 1000;
     public AudioClip deathclip;
     public AudioClip hurtclip;
     public AudioClip attackingclip;
@@ -50,10 +50,9 @@ public class SummonerAI : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        //Destroy(effect, 1f);
         if (collision.gameObject.CompareTag("Playerbullet"))
         {
             AudioSource.PlayClipAtPoint(hurtclip, transform.position, 1f);
@@ -64,7 +63,7 @@ public class SummonerAI : MonoBehaviour
                 print(health);
                 hit();
             }
-            
+
         }
     }
     private void ChangeSprite(Spritedata spritedata)

@@ -20,13 +20,23 @@ public class DummyScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    private void OnCollisionEnter2D(Collision2D collision)
+  
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Playerbullet"))
         {
             currentdamage = _playerShooterScript.playerdamage;
             totaldamage = totaldamage + _playerShooterScript.playerdamage;
+            CurrentDamageText.SetText(currentdamage.ToString());
+            TotalDamageText.SetText(totaldamage.ToString());
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            currentdamage = 0;
+            totaldamage = 0;
             CurrentDamageText.SetText(currentdamage.ToString());
             TotalDamageText.SetText(totaldamage.ToString());
         }

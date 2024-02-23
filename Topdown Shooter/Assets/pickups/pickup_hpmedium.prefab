@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 236d08e3f4c2857438a5686f62a32fa2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,10 +99,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pickup: {fileID: 7640464804758797940}
-  player: {fileID: 0}
   clip: {fileID: 8300000, guid: 816b5f0391e349f418d3f3473f83081a, type: 3}
+  audiosource: {fileID: 0}
   _playerShooterScript: {fileID: 0}
   _playerMovementScript: {fileID: 0}
+  _playerPickupText: {fileID: 0}
   hpgiven: 4
   ammogiven: 0
   overheal: 0
@@ -136,7 +137,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

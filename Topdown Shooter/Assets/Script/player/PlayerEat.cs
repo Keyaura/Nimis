@@ -69,7 +69,6 @@ public class PlayerEat : MonoBehaviour
     void PickupGeneration(Vector3 position)
     {
         int willdroppickups = Random.Range(1, 5);
-        print(willdroppickups);
         if (willdroppickups == 3)
         {
             int pickupgenerated = Random.Range(1, 21);

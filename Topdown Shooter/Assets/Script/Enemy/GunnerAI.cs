@@ -28,11 +28,12 @@ public class GunnerAI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         _playerShooterScript = UnityEngine.Object.FindFirstObjectByType<playershooting>();
-        float randomdelay = Random.Range(0.5f, 1.2f);
+        float randomdelay = Random.Range(0.8f, 1.2f);
 
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         //Destroy(effect, 1f);
@@ -61,7 +62,7 @@ public class GunnerAI : MonoBehaviour
 
         if (Time.time > timesincelastshot + randomdelay)
         {
-            randomdelay = Random.Range(0.5f, 1.2f);
+            randomdelay = Random.Range(0.8f, 1.2f);
             if (distanceToPlayer < 20)
             {
                 float spreadvalue = (Random.Range(-30f, 30f));
@@ -78,7 +79,7 @@ public class GunnerAI : MonoBehaviour
         if (health > 0)
         {
 
-            if (stationary == false)
+            if (stationary == false && distanceToPlayer > 3)
             {
                 transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
                 // animatortest.Set("Running");

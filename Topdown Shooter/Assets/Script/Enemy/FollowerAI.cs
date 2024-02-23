@@ -35,14 +35,7 @@ public class FollowerAI : MonoBehaviour
         //Destroy(player);
         //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         //Destroy(effect, 1f);
-        if (collision.gameObject.CompareTag("Playerbullet"))
-        {
-            AudioSource.PlayClipAtPoint(hurtclip, transform.position, 1f);
-
-            health = health - _playerShooterScript.playerdamage;
-
-
-        }
+        
         if (collision.gameObject.CompareTag("Player"))
         {
             if (health > 0)
@@ -51,7 +44,18 @@ public class FollowerAI : MonoBehaviour
             }
         }
     }
-        void LateUpdate()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Playerbullet"))
+        {
+            AudioSource.PlayClipAtPoint(hurtclip, transform.position, 1f);
+
+            health = health - _playerShooterScript.playerdamage;
+
+
+        }
+    }
+    void LateUpdate()
         {
             if (health >= 0)
             {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,7 @@ public class playershooting : MonoBehaviour
     // Start is called before the first frame update
     public Transform firePoint;
     public GameObject playerbulletPrefab;
-
+    public string weaponname;
     public float bulletForce = 20f;
     public int score = 0;
     public int ammo = 15;
@@ -21,22 +22,31 @@ public class playershooting : MonoBehaviour
     public AudioClip reloadclip;
     public AudioClip yourefuckedclip;
     public TMP_Text ammoui;
-    public TMP_Text totalammoui;
-    public TMP_Text scoreui;
+    public TMP_Text gunui;
     public int playerdamage = 3;
     public float spread = 7.5f;
     private float timesincelastshot;
-    public float spreadminus = 7.5f;
+    public float reloadtime = 0.05f;
+    public int shotsfired = 0;
+    public bool isautomatic;
+    public float burstdelay = 0.15f;
+    //public bool automatic;
+    // public string firebutton;
+    //private bool waitingForNextShot;
 
-    private bool waitingForNextShot;
-
+    private void Start()
+    {
+        gunui.SetText(weaponname);
+    }
 
     void Update()
     {
         ammoui.SetText($"{ammo}/{totalammo}");
-        if (Input.GetButton("Fire1"))
+
+        if (isautomatic ? Input.GetButton("Fire1") : Input.GetButtonDown("Fire1"))
         {
-            PlayerShoot();
+            StartCoroutine(PlayerShoot());
+            
         }
         if (Input.GetButtonDown("Fire3") || Input.GetKeyDown("r"))
         {
@@ -55,39 +65,52 @@ public class playershooting : MonoBehaviour
         totalammo = totalammo + overflow;
         ammo = maxheldammo;
     }
-    void PlayerShoot()
+ 
+    IEnumerator PlayerShoot()
     {
-        if (Time.time > timesincelastshot + 0.15f)
-        {
-
-
-            if (ammo > 0)
+            if (Time.time > timesincelastshot + reloadtime)
             {
-                float spreadvalue = (Random.Range(-7.5f, 7.5f));
-                Quaternion bulletRotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + spreadvalue);
-                GameObject playerbullet = Instantiate(playerbulletPrefab, firePoint.position, bulletRotation);
-                Rigidbody2D rb = playerbullet.GetComponent<Rigidbody2D>();
-                rb.AddForce(playerbullet.transform.right * bulletForce, ForceMode2D.Impulse);
-                audiosource.PlayOneShot(shootclip, 0.2f);
-                Destroy(playerbullet, 5f);
-                timesincelastshot = Time.time;
+                for (int i = 0; i < shotsfired; i++)
+                {
+                print("Shot");
+                
 
-                ammo = ammo - 1;
+                if (ammo > 0)
+                {
+                    float spreadvalue = (Random.Range(-spread, spread)); //randomizes spread before shots
+                    Quaternion bulletRotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + spreadvalue);
+                    //applies random spread to the weapon determined by the spread value
+                    GameObject playerbullet = Instantiate(playerbulletPrefab, firePoint.position, bulletRotation);
+                    Rigidbody2D rb = playerbullet.GetComponent<Rigidbody2D>();
+                    rb.AddForce(playerbullet.transform.right * bulletForce, ForceMode2D.Impulse); //
+                    audiosource.PlayOneShot(shootclip, 0.2f);
+                    Destroy(playerbullet, 5f); //player bullet timeout, destroys bullets that dont collide with anything
+                    timesincelastshot = Time.time;
+
+                    ammo = ammo - 1;
+                    //burstActive = false;
+                    //StartCoroutine(WaitAfterBurst(burstdelay));
+                }
+                else if (ammo == 0)
+                {
+                    audiosource.PlayOneShot(emptyclip, 0.4f);
+                    timesincelastshot = Time.time;
+                    //plays the "empty ammo thunk" sound effect when the magazine is empty
+                   
+                }
+                yield return new WaitForSeconds(burstdelay);
+
             }
-            else if (ammo == 0)
-            {
-                audiosource.PlayOneShot(emptyclip, 0.4f);
-                timesincelastshot = Time.time;
-            }
+
         }
     }
-    void Reload()
+        void Reload()
     {
-        if (totalammo > 0 && ammo != 15)
+        if (totalammo > 0 && ammo != maxheldammo)
         {
 
             totalammo = totalammo + ammo;
-            if (totalammo >= 15)
+            if (totalammo >= maxheldammo)
             {
                 audiosource.PlayOneShot(reloadclip, 0.5f);
                 ammo = maxheldammo;
@@ -104,5 +127,9 @@ public class playershooting : MonoBehaviour
         {
             audiosource.PlayOneShot(yourefuckedclip, 1.2f);
         }
+    }
+    private void FixedUpdate()
+    {
+        gunui.SetText(weaponname);
     }
 }

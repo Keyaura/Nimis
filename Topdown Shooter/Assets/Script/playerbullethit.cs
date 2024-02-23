@@ -6,9 +6,12 @@ public class playerbullethit : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject hitEffect;
-    private void OnCollisionEnter2D(Collision2D collision)
+    public int hitcount;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject){
+        hitcount--;
+        if (collision.gameObject && hitcount <= 0){
             GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
             Destroy(effect, 0.175f);
             Destroy(gameObject);

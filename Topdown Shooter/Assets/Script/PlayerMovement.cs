@@ -65,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
             playerhealth = maxhealth;
         }
         animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
         if (Input.GetKeyDown(KeyCode.Escape))
         {

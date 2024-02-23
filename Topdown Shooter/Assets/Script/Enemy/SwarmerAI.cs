@@ -34,8 +34,17 @@ public class EnemyCollision : MonoBehaviour
        
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (health > 0)
+            {
+                _playerMovementScript.playerhealth = _playerMovementScript.playerhealth - damage;
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //Destroy(player);
         //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
@@ -47,13 +56,7 @@ public class EnemyCollision : MonoBehaviour
 
             health = health - _playerShooterScript.playerdamage;
        }
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            if (health > 0)
-            {
-                _playerMovementScript.playerhealth = _playerMovementScript.playerhealth - damage;
-            }
-        }
+       
     }
     void LateUpdate()
     {
